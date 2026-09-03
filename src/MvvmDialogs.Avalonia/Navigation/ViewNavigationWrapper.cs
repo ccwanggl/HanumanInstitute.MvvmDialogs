@@ -33,8 +33,9 @@ public class ViewNavigationWrapper : IView
     public void InitializeExisting(INotifyPropertyChanged viewModel, object view)
     {
         ViewModel = viewModel;
-        ViewDef = new ViewDefinition(view.GetType(), () => (UserControl)view);
         Ref = (UserControl)view;
+        var viewType = view.GetType();
+        ViewDef = new ViewDefinition(viewType, () => Ref ?? Activator.CreateInstance(viewType)!);
     }
 
     private ViewDefinition ViewDef { get; set; }
@@ -42,9 +43,14 @@ public class ViewNavigationWrapper : IView
     public IView? Owner { get; set; }
 
     /// <summary>
-    /// Gets the UserControl reference held by this class.
+    /// Gets the UserControl reference held by this class. Stored as a weak reference so the view can be collected.
     /// </summary>
-    public UserControl? Ref { get; private set; }
+    public UserControl? Ref
+    {
+        get => _ref != null && _ref.TryGetTarget(out var view) ? view : null;
+        private set => _ref = value is null ? null : new WeakReference<UserControl>(value);
+    }
+    private WeakReference<UserControl>? _ref;
 
     /// <inheritdoc />
     public object RefObj => Ref!;
