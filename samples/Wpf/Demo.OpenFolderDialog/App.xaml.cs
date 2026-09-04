@@ -1,4 +1,4 @@
-﻿using HanumanInstitute.MvvmDialogs.Wpf;
+﻿using System.Windows;
 
 namespace Demo.Wpf.OpenFolderDialog;
 

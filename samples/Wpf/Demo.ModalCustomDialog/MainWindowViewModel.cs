@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace Demo.Wpf.ModalCustomDialog;
 
 public class MainWindowViewModel : ObservableObject

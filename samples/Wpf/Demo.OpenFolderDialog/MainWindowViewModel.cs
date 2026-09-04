@@ -1,4 +1,7 @@
-﻿namespace Demo.Wpf.OpenFolderDialog;
+﻿using System.Reflection;
+using HanumanInstitute.MvvmDialogs.FileSystem;
+
+namespace Demo.Wpf.OpenFolderDialog;
 
 public class MainWindowViewModel : ObservableObject
 {
@@ -35,7 +38,7 @@ public class MainWindowViewModel : ObservableObject
         var settings = new OpenFolderDialogSettings
         {
             Title = "This is a description",
-            SuggestedStartLocation = new DesktopDialogStorageFolder(IOPath.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
+            SuggestedStartLocation = new DesktopDialogStorageFolder(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
         };
 
         var result = _dialogService.ShowOpenFolderDialog(owner, settings);
@@ -47,7 +50,7 @@ public class MainWindowViewModel : ObservableObject
         var settings = new OpenFolderDialogSettings
         {
             Title = "This is a description",
-            SuggestedStartLocation = new DesktopDialogStorageFolder(IOPath.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
+            SuggestedStartLocation = new DesktopDialogStorageFolder(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!)
         };
 
         var result = await _dialogService.ShowOpenFolderDialogAsync(owner, settings);

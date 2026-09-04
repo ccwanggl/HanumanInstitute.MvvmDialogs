@@ -1,4 +1,6 @@
-﻿namespace Demo.Avalonia.CustomOpenFolderDialog;
+﻿using ReactiveUI;
+
+namespace Demo.Avalonia.CustomOpenFolderDialog;
 
 public class ViewModelBase : ReactiveObject
 {

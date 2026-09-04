@@ -1,4 +1,8 @@
-﻿namespace Demo.Avalonia.CustomOpenFolderDialog;
+﻿using System;
+using Avalonia;
+using ReactiveUI.Avalonia;
+
+namespace Demo.Avalonia.CustomOpenFolderDialog;
 
 class Program
 {

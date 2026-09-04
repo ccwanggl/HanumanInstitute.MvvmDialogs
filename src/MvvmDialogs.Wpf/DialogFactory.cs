@@ -172,7 +172,7 @@ public class DialogFactory : DialogFactoryBase
             Win32Result.OK => true,
             Win32Result.No => false,
             Win32Result.Cancel => null,
-            _ => (bool?)null
+            _ => null
         };
 
     }

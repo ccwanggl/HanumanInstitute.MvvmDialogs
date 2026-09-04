@@ -1,4 +1,7 @@
-﻿namespace Demo.Avalonia.CustomOpenFolderDialog;
+﻿using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+
+namespace Demo.Avalonia.CustomOpenFolderDialog;
 
 public partial class MainWindow : Window
 {

@@ -1,4 +1,6 @@
-﻿namespace Demo.Avalonia.CustomOpenFolderDialog
+﻿using HanumanInstitute.MvvmDialogs;
+
+namespace Demo.Avalonia.CustomOpenFolderDialog
 {
     public static class DialogFactoryExtensions
     {

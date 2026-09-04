@@ -1,6 +1,4 @@
-﻿using HanumanInstitute.MvvmDialogs.Wpf;
-
-namespace Demo.Wpf.NonModalCustomDialog;
+﻿namespace Demo.Wpf.NonModalCustomDialog;
 
 public class CurrentTimeCustomDialog : IView, IViewSync
 {

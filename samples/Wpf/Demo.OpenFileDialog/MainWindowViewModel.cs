@@ -1,4 +1,8 @@
-﻿namespace Demo.Wpf.OpenFileDialog;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using HanumanInstitute.MvvmDialogs.FileSystem;
+
+namespace Demo.Wpf.OpenFileDialog;
 
 public class MainWindowViewModel : ObservableObject
 {
@@ -75,7 +79,7 @@ public class MainWindowViewModel : ObservableObject
     private static OpenFileDialogSettings GetSettings(bool multiple) => new()
     {
         Title = multiple ? "Open multiple files" : "Open single file",
-        SuggestedStartLocation = new DesktopDialogStorageFolder(IOPath.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
+        SuggestedStartLocation = new DesktopDialogStorageFolder(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
         SuggestedFileName = "InitialName",
         Filters = new List<FileFilter>()
             {

@@ -1,4 +1,8 @@
-﻿namespace Demo.Wpf.SaveFileDialog;
+﻿using System.Collections.Generic;
+using System.Reflection;
+using HanumanInstitute.MvvmDialogs.FileSystem;
+
+namespace Demo.Wpf.SaveFileDialog;
 
 public class MainWindowViewModel : ObservableObject
 {
@@ -34,7 +38,7 @@ public class MainWindowViewModel : ObservableObject
         var settings = new SaveFileDialogSettings
         {
             Title = "This is the title",
-            SuggestedStartLocation = new DesktopDialogStorageFolder(IOPath.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
+            SuggestedStartLocation = new DesktopDialogStorageFolder(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
             Filters = new List<FileFilter>()
             {
                 new("Text Documents", "txt"),
@@ -51,7 +55,7 @@ public class MainWindowViewModel : ObservableObject
         var settings = new SaveFileDialogSettings
         {
             Title = "This is the title",
-            SuggestedStartLocation = new DesktopDialogStorageFolder(IOPath.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
+            SuggestedStartLocation = new DesktopDialogStorageFolder(System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!),
             Filters = new List<FileFilter>()
             {
                 new("Text Documents", "txt"),
