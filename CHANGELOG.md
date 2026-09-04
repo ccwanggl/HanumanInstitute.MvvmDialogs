@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## 2.3 - 2026-09-04
+## 2.4 - 2026-09-04
 
 This update fixes some memory management issues and addresses some other minor issues.
 
@@ -21,6 +21,10 @@ This update fixes some memory management issues and addresses some other minor i
 
 - Replaced manual `CancellableActions.Add`/`Remove` registration with `RunAsync`, including safe concurrent cancellation and identity-based cleanup.
 - `IDialogManager.HandleDialogEvents` now returns an `IDisposable` registration for explicit cleanup.
+
+## 2.3 - 2026-04-24
+
+- Updated to Avalonia v12
 
 ## 2.2 - 2026-03-05
 
