@@ -1,11 +1,4 @@
-﻿using System;
-using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
-using Avalonia.Markup.Xaml;
-using HanumanInstitute.MvvmDialogs;
-using HanumanInstitute.MvvmDialogs.Avalonia;
-using Microsoft.Extensions.Logging;
-using Splat;
+﻿using HanumanInstitute.MvvmDialogs.Avalonia;
 
 namespace Demo.Avalonia.CustomOpenFolderDialog;
 

@@ -1,16 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
-using System.Reflection;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using HanumanInstitute.MvvmDialogs;
-using HanumanInstitute.MvvmDialogs.FileSystem;
-using HanumanInstitute.MvvmDialogs.FrameworkDialogs;
-using IOPath = System.IO.Path;
-
-namespace Demo.Wpf.SaveFileDialog;
+﻿namespace Demo.Wpf.SaveFileDialog;
 
 public class MainWindowViewModel : ObservableObject
 {

@@ -55,19 +55,15 @@ public class ViewNavigationWrapper : IView
     /// <inheritdoc />
     public object RefObj => Ref!;
 
-    /// <summary>
-    /// Unused event.
-    /// </summary>
+    /// <inheritdoc />
     public event EventHandler? Loaded;
 
     /// <summary>
-    /// Unused event.
+    /// Unused. Closing is dispatched through the constructor <see cref="ViewClosingHandler"/> so this wrapper supports a single listener.
     /// </summary>
     public event EventHandler<CancelEventArgs>? Closing;
 
-    /// <summary>
-    /// Unused event.
-    /// </summary>
+    /// <inheritdoc />
     public event EventHandler? Closed;
 
     /// <inheritdoc />
@@ -75,6 +71,7 @@ public class ViewNavigationWrapper : IView
 
     private void RaiseLoaded()
     {
+        Loaded?.Invoke(this, EventArgs.Empty);
         if (ViewModel is IViewLoaded vm)
         {
             vm.OnLoaded();
@@ -83,6 +80,7 @@ public class ViewNavigationWrapper : IView
 
     private void RaiseClosed()
     {
+        Closed?.Invoke(this, EventArgs.Empty);
         if (ViewModel is IViewClosed vm)
         {
             vm.OnClosed();

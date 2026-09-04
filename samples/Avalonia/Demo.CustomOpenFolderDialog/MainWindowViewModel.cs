@@ -1,13 +1,4 @@
-﻿using System.Reflection;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using HanumanInstitute.MvvmDialogs;
-using HanumanInstitute.MvvmDialogs.FileSystem;
-using HanumanInstitute.MvvmDialogs.FrameworkDialogs;
-using ReactiveUI;
-using IOPath = System.IO.Path;
-
-namespace Demo.Avalonia.CustomOpenFolderDialog;
+﻿namespace Demo.Avalonia.CustomOpenFolderDialog;
 
 public class MainWindowViewModel : ViewModelBase
 {
